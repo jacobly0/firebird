@@ -348,7 +348,7 @@ static int process_debug_cmd(char *cmdline) {
             usblink_connect();
             return 1; // and continue, ARM code needs to be run
         } else if (!strcasecmp(ln_cmd, "s")) {
-            char *file = strtok(NULL, "\n");
+            char *file = strtok(NULL, "\n\r");
             if (!file) {
                 gui_debug_printf("Missing file parameter.\n");
             } else {
